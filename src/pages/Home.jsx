@@ -185,16 +185,16 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-walmart text-white p-6 rounded-lg text-center">
-              <div className="text-4xl font-bold mb-2">5+</div>
-              <div className="text-sm">Years of Experience</div>
+              <div className="text-4xl font-bold mb-2">10+</div>
+              <div className="text-sm">Years of Enterprise Experience</div>
             </div>
             <div className="bg-walmart text-white p-6 rounded-lg text-center">
-              <div className="text-4xl font-bold mb-2">50+</div>
-              <div className="text-sm">Successful Projects</div>
+              <div className="text-4xl font-bold mb-2">20+</div>
+              <div className="text-sm">Projects Delivered</div>
             </div>
             <div className="bg-walmart text-white p-6 rounded-lg text-center">
-              <div className="text-4xl font-bold mb-2">5</div>
-              <div className="text-sm">Salesforce Certifications</div>
+              <div className="text-4xl font-bold mb-2">10+</div>
+              <div className="text-sm">Salesforce Certified Professionals</div>
             </div>
             <div className="bg-walmart text-white p-6 rounded-lg text-center">
               <div className="text-4xl font-bold mb-2">100%</div>
