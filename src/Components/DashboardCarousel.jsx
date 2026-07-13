@@ -118,13 +118,13 @@ export default function DashboardCarousel() {
             {dashboards.map((dashboard) => (
               <div
                 key={dashboard.id}
-                className="flex-shrink-0 w-full md:w-[480px] scroll-snap-align-start"
+                className="flex-shrink-0 w-full md:w-[450px] scroll-snap-align-start"
                 style={{ scrollSnapAlign: 'start' }}
               >
-                {/* Dashboard Card */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                  {/* Image Container - Shows full image without cutting */}
-                  <div className="relative overflow-hidden bg-gray-100 h-80">
+                {/* Dashboard Card - Fixed Height */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 h-full flex flex-col">
+                  {/* Image Container - Fixed Height */}
+                  <div className="relative overflow-hidden bg-gray-100 h-64 flex-shrink-0">
                     <img
                       src={dashboard.image}
                       alt={dashboard.title}
@@ -133,10 +133,10 @@ export default function DashboardCarousel() {
                     />
                   </div>
 
-                  {/* Text Content */}
-                  <div className="p-6">
+                  {/* Text Content - Takes remaining space */}
+                  <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-bold text-navy mb-2">{dashboard.title}</h3>
-                    <p className="text-gray-600 text-sm">{dashboard.description}</p>
+                    <p className="text-gray-600 text-sm flex-grow">{dashboard.description}</p>
                   </div>
                 </div>
               </div>
