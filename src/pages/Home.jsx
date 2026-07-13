@@ -3,19 +3,34 @@ export default function Home() {
     <div>
       {/* ===== HERO SECTION ===== */}
       <section id="home" className="bg-gradient-to-r from-walmart to-blue-900 text-white py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6">Journey Connects</h1>
-          <p className="text-2xl mb-4">Salesforce Marketing Cloud & Data Cloud Solutions</p>
-          <p className="text-xl mb-8 text-gray-100">Connecting Data. Automating Email. Driving Results.</p>
-          
-          <div className="flex gap-4 justify-center">
-            <a href="https://outlook.office.com/bookwithme/user/638faf7d7c3644adaf9acfa7aedbe539@journeyconnects.com/meetingtype/u85uVO4i-kK8IYZZqTqvuA2?anonymous&ismsaljsauthenabled&ep=mCardFromTile" 
-               className="bg-white text-walmart px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-              Book Free Consultation
-            </a>
-            <a href="#services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-walmart transition">
-              Learn More
-            </a>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left Side - Text */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-5xl font-bold mb-6">Journey Connects</h1>
+              <p className="text-2xl mb-4">Salesforce Marketing Cloud & Data Cloud Solutions</p>
+              <p className="text-xl mb-8 text-gray-100">Connecting Data. Automating Email. Driving Results.</p>
+              
+              <div className="flex gap-4 justify-center lg:justify-start">
+                <a href="https://outlook.office.com/bookwithme/user/638faf7d7c3644adaf9acfa7aedbe539@journeyconnects.com/meetingtype/u85uVO4i-kK8IYZZqTqvuA2?anonymous&ismsaljsauthenabled&ep=mCardFromTile" 
+                   className="bg-white text-walmart px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                  Book Free Consultation
+                </a>
+                <a href="#services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-walmart transition">
+                  Learn More
+                </a>
+              </div>
+            </div>
+
+            {/* Right Side - Image (Hidden on mobile, shown on desktop) */}
+            <div className="hidden lg:block">
+              <img 
+                src="/hero-image.png" 
+                alt="Journey Connects - Salesforce Marketing Cloud & Data Cloud in action" 
+                className="w-full rounded-lg shadow-2xl object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -160,7 +175,7 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-navy mb-8">Our Expertise</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-bold text-walmart mb-4">Marketing Cloud Expertise</h4>
+                <h4 className="font-bold text-walmart mb-4">Marketing Cloud & Email</h4>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Journey Builder & Automation Studio</li>
                   <li>• Email Studio & Template Development</li>
