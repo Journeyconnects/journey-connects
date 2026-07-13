@@ -8,25 +8,25 @@ export default function DashboardCarousel() {
   const dashboards = [
     {
       id: 1,
-      image: '/dashboard-1.png',
+      image: '/Dashboard-1.png',
       title: 'Campaign Performance',
       description: 'Track campaigns, metrics, and ROI in real-time'
     },
     {
       id: 2,
-      image: '/dashboard-2.png',
+      image: '/Dashboard-2.png',
       title: 'Email Analytics',
       description: 'Monitor open rates, click rates, and engagement'
     },
     {
       id: 3,
-      image: '/dashboard-3.png',
+      image: '/Dashboard-3.png',
       title: 'Customer Profiles',
       description: 'Unified customer data from all sources'
     },
     {
       id: 4,
-      image: '/dashboard-4.png',
+      image: '/Dashboard-4.png',
       title: 'Journey Builder',
       description: 'Design and automate customer journeys'
     }
