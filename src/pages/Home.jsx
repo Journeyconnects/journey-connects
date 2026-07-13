@@ -1,3 +1,5 @@
+import DashboardCarousel from '../Components/DashboardCarousel'
+
 export default function Home() {
   return (
     <div>
@@ -34,6 +36,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ===== DASHBOARD CAROUSEL ===== */}
+      <DashboardCarousel />
 
       {/* ===== SERVICES SECTION ===== */}
       <section id="services" className="py-16 px-4 bg-gray-50">
@@ -175,7 +180,7 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-navy mb-8">Our Expertise</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-bold text-walmart mb-4">Marketing Cloud Expertise</h4>
+                <h4 className="font-bold text-walmart mb-4">Marketing Cloud & Email</h4>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Journey Builder & Automation Studio</li>
                   <li>• Email Studio & Template Development</li>
