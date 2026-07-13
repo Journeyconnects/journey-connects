@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 export default function DashboardCarousel() {
   const scrollContainer = useRef(null)
@@ -42,7 +42,7 @@ export default function DashboardCarousel() {
 
   const scroll = (direction) => {
     if (scrollContainer.current) {
-      const scrollAmount = 400
+      const scrollAmount = 500
       const newScrollLeft = scrollContainer.current.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount)
       scrollContainer.current.scrollTo({
         left: newScrollLeft,
@@ -50,6 +50,23 @@ export default function DashboardCarousel() {
       })
     }
   }
+
+  // Auto-scroll every 5 seconds
+  useEffect(() => {
+    const autoScroll = setInterval(() => {
+      if (scrollContainer.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollContainer.current
+        // If at the end, scroll back to start
+        if (scrollLeft >= scrollWidth - clientWidth - 10) {
+          scrollContainer.current.scrollTo({ left: 0, behavior: 'smooth' })
+        } else {
+          scroll('right')
+        }
+      }
+    }, 5000) // Auto-scroll every 5 seconds
+
+    return () => clearInterval(autoScroll)
+  }, [])
 
   return (
     <section className="py-16 px-4 bg-white">
@@ -95,23 +112,23 @@ export default function DashboardCarousel() {
             ref={scrollContainer}
             onScroll={checkScroll}
             onLoad={checkScroll}
-            className="flex gap-6 overflow-x-auto scroll-smooth pb-4 px-4 md:px-16 scroll-snap-type-x"
+            className="flex gap-6 overflow-x-auto scroll-smooth pb-4 px-4 md:px-16"
             style={{ scrollBehavior: 'smooth', scrollSnapType: 'x mandatory' }}
           >
             {dashboards.map((dashboard) => (
               <div
                 key={dashboard.id}
-                className="flex-shrink-0 w-full md:w-[450px] scroll-snap-align-start"
+                className="flex-shrink-0 w-full md:w-[480px] scroll-snap-align-start"
                 style={{ scrollSnapAlign: 'start' }}
               >
                 {/* Dashboard Card */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300">
-                  {/* Image */}
-                  <div className="relative overflow-hidden bg-gray-100 h-64 md:h-72">
+                <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                  {/* Image Container - Shows full image without cutting */}
+                  <div className="relative overflow-hidden bg-gray-100 h-80">
                     <img
                       src={dashboard.image}
                       alt={dashboard.title}
-                      className="w-full h-full object-cover hover:scale-110 transition duration-300"
+                      className="w-full h-full object-contain"
                       loading="lazy"
                     />
                   </div>
