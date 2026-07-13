@@ -22,8 +22,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Side - Image (Hidden on mobile, shown on desktop) */}
-            <div className="hidden lg:block">
+            {/* Right Side - Image (Shows on desktop, mobile shows below) */}
+            <div>
               <img 
                 src="/hero-image.png" 
                 alt="Journey Connects - Salesforce Marketing Cloud & Data Cloud in action" 
@@ -175,7 +175,7 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-navy mb-8">Our Expertise</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-bold text-walmart mb-4">Marketing Cloud & Email</h4>
+                <h4 className="font-bold text-walmart mb-4">Marketing Cloud Expertise</h4>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Journey Builder & Automation Studio</li>
                   <li>• Email Studio & Template Development</li>
