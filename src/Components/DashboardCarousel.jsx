@@ -6,31 +6,31 @@ export default function DashboardCarousel() {
   const [canScrollRight, setCanScrollRight] = useState(true)
 
   const dashboards = [
-    {
-      id: 1,
-      image: '/Dashboard-1.png',
-      title: 'Campaign Performance',
-      description: 'Track campaigns, metrics, and ROI in real-time'
-    },
-    {
-      id: 2,
-      image: '/Dashboard-2.png',
-      title: 'Email Analytics',
-      description: 'Monitor open rates, click rates, and engagement'
-    },
-    {
-      id: 3,
-      image: '/Dashboard-3.png',
-      title: 'Customer Profiles',
-      description: 'Unified customer data from all sources'
-    },
-    {
-      id: 4,
-      image: '/Dashboard-4.png',
-      title: 'Journey Builder',
-      description: 'Design and automate customer journeys'
-    }
-  ]
+  {
+    id: 1,
+    image: '/Dashboard-1.png',
+    title: 'Journey Builder',
+    description: 'Design and automate customer journeys'
+  },
+  {
+    id: 2,
+    image: '/Dashboard-2.png',
+    title: 'Customer Profiles',
+    description: 'Unified customer data from all sources'
+  },
+  {
+    id: 3,
+    image: '/Dashboard-3.png',
+    title: 'Email Analytics',
+    description: 'Monitor open rates, click rates, and engagement'
+  },
+  {
+    id: 4,
+    image: '/Dashboard-4.png',
+    title: 'Campaign Performance',
+    description: 'Track campaigns, metrics, and ROI in real-time'
+  }
+]
 
   const checkScroll = () => {
     if (scrollContainer.current) {
@@ -75,7 +75,7 @@ export default function DashboardCarousel() {
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-center mb-4 text-navy">See It In Action</h2>
           <p className="text-center text-gray-600 text-lg max-w-2xl mx-auto">
-            Explore real Salesforce dashboards showing email campaigns, customer data, and marketing automation in action
+            Explore Salesforce dashboards showing email campaigns, customer data, and marketing automation in action
           </p>
         </div>
 
